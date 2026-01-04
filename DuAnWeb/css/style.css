@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-/* Reset cơ bản */
+/* --- RESET & BASIC --- */
 * {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif; /* Áp dụng font mới cho toàn web */
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 body {
     background-color: #f4f4f4;
-    font-size: 14px; /* Kích thước chữ chuẩn */
+    font-size: 14px;
 }
 
 .wrapper {
@@ -18,9 +18,9 @@ body {
     margin: 0 auto;
 }
 
-/* --- HEADER CONTAINER --- */
+/* --- HEADER --- */
 .header-container {
-    background-color: #222; /* Màu đen hiện đại hơn chút */
+    background-color: #222;
     color: white;
     height: 80px;
     display: flex;
@@ -33,62 +33,63 @@ body {
 
 .header-main {
     width: 100%;
-    max-width: 1200px; /* Giới hạn chiều rộng để nội dung không bị bè ra 2 mép */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
 }
 
-/* --- 1. LOGO IMAGE --- */
+/* --- LOGO --- */
 .logo img {
-    height: 60px; /* Chiều cao cố định để logo không bị vỡ khung header */
-    width: auto;  /* Chiều rộng tự động theo tỉ lệ */
-    display: block; /* Xóa khoảng trắng thừa dưới ảnh */
-    filter: invert(1); /* Mẹo: Nếu logo của bạn màu đen, dòng này sẽ đảo nó thành trắng cho nổi trên nền đen. Nếu logo đã trắng thì xóa dòng này đi */
+    height: 60px;
+    width: auto;
+    display: block;
+    filter: invert(1);
 }
 
-/* --- 2. MENU --- */
+/* --- MENU --- */
 .main-menu ul {
     list-style: none;
     display: flex;
-    gap: 10px; /* Khoảng cách giữa các mục menu */
+    gap: 10px;
 }
 
 .main-menu ul li a {
     text-decoration: none;
-    color: #ccc; /* Màu chữ xám nhạt cho sang */
-    font-weight: 500; /* Độ đậm vừa phải */
+    color: #ccc;
+    font-weight: 500;
     font-size: 13px;
-    text-transform: uppercase; /* Viết hoa toàn bộ */
+    text-transform: uppercase;
     padding: 10px;
     transition: 0.3s;
-    white-space: nowrap; /* Không cho chữ xuống dòng */
+    white-space: nowrap;
 }
 
 .main-menu ul li a:hover {
     color: white;
-    background-color: #444; /* Hiệu ứng nền khi di chuột */
+    background-color: #444;
     border-radius: 4px;
 }
 
-/* --- 3. SEARCH & ACTIONS --- */
+/* --- SEARCH & ACTIONS --- */
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 15px; /* Khoảng cách giữa ô tìm kiếm và các icon */
+    gap: 15px;
 }
 
 .search-box {
     display: flex;
     background: white;
-    border-radius: 30px; /* Bo tròn ô tìm kiếm */
+    border-radius: 30px;
     overflow: hidden;
     border: 2px solid transparent;
 }
+
 .search-box:focus-within {
-    border-color: #ff3333; /* Viền đỏ khi bấm vào nhập */
+    border-color: #ff3333;
 }
 
 .search-box input {
@@ -107,11 +108,11 @@ body {
     cursor: pointer;
     font-size: 14px;
 }
+
 .search-box button:hover {
     color: #ff3333;
 }
 
-/* User & Cart Icons */
 .user-actions {
     display: flex;
     align-items: center;
@@ -124,7 +125,7 @@ body {
     font-size: 13px;
     display: flex;
     align-items: center;
-    gap: 5px; /* Khoảng cách giữa icon và chữ */
+    gap: 5px;
     transition: 0.2s;
 }
 
@@ -134,4 +135,175 @@ body {
 
 .user-actions i {
     font-size: 18px;
+}
+
+/* --- BANNER --- */
+.banner-slider img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- MAIN LAYOUT --- */
+#main {
+    max-width: 1200px;
+    margin: 30px auto;
+    display: flex;
+    gap: 30px;
+    padding: 0 15px;
+}
+
+.sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    background: #fff;
+}
+
+.maincontent {
+    flex: 1;
+}
+
+/* --- SIDEBAR --- */
+.sidebar-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+ul.list_sidebar {
+    list-style: none;
+    padding: 0;
+}
+
+ul.list_sidebar li {
+    margin-bottom: 10px;
+}
+
+ul.list_sidebar li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: block;
+    padding: 8px 0;
+    transition: 0.2s;
+    border-bottom: 1px dashed #ddd;
+}
+
+ul.list_sidebar li a:hover {
+    color: #ff3333;
+    padding-left: 5px;
+}
+
+/* --- PRODUCT GRID --- */
+.heading-product {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+ul.product_list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+ul.product_list li {
+    width: calc(25% - 15px);
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.product-item {
+    position: relative;
+    border: 1px solid transparent;
+    padding-bottom: 10px;
+    transition: 0.3s;
+}
+
+.product-item:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-color: #eee;
+}
+
+.product-img {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    background: #f9f9f9;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.product-item:hover .product-img img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 10px;
+    text-align: left;
+}
+
+p.title_product {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0 5px 0;
+    height: 40px;
+    overflow: hidden;
+    line-height: 1.4;
+}
+
+p.title_price {
+    font-size: 16px;
+    color: #ff3333;
+    font-weight: bold;
+    margin: 0;
+}
+
+.cart-icon-hover {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    background: #333;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.product-item:hover .cart-icon-hover {
+    opacity: 1;
+    bottom: 20px;
+}
+
+/* --- FOOTER --- */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
 }
