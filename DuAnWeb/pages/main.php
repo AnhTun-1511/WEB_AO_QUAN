@@ -5,31 +5,34 @@
 
             <div class="maincontent">
                 <?php
-                   if(isset($_GET['quanly'])) {
+                    if(isset($_GET['quanly'])) {
                         $tam = $_GET['quanly'];
                     } else {
                         $tam = '';
                     }
                     if($tam == 'danhmucsanpham') {
-                        include("main/danhmuc.php");
+                        include("pages/main/danhmuc.php");
                     } elseif($tam == 'giohang') {
-                        include("main/giohang.php");
+                        include("pages/main/giohang.php");
                     } elseif($tam == 'dangky') {
                         include("main/dangky.php");
                     } elseif($tam == 'dangnhap') {
-                        include("main/dangnhap.php");
+                        include("pages/main/dangnhap.php");
                     } elseif($tam == 'doimatkhau') {
-                        include("main/doimatkhau.php");
+                        include("pages/main/doimatkhau.php");
                     }elseif($tam == 'thanhtoan') {
-                        include("main/thanhtoan.php");
+                        include("pages/main/thanhtoan.php");
                     } elseif($tam == 'thongtin') {
-                        include("main/thongtin.php");
+                        include("pages/main/thongtin.php");
                     } elseif($tam == 'lienhe') {
-                        include("main/lienhe.php");
+                        include("pages/main/lienhe.php");
                     } elseif($tam == 'sanpham') {
-                        include("main/sanpham.php");
-                    } else {
-                        include("main/index.php");
+                        include("pages/main/sanpham.php");
+                    } elseif($tam == 'timkiem') {
+                        include("pages/main/timkiem.php");
+                    }
+                    else {
+                        include("pages/main/index.php");
                     }
                 ?>
             </div>
