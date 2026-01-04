@@ -386,3 +386,106 @@ p.title_price {
 .btn-add-cart i {
     margin-right: 10px;
 }
+/* --- FOOTER STYLE --- */
+.footer {
+    background-color: #222; /* Màu đen cùng tông với Header */
+    color: #ccc;
+    padding-top: 40px;
+    margin-top: 50px;
+    border-top: 4px solid #ff3333; 
+}
+
+.footer-content {
+    display: flex; /* Dàn trang 4 cột nằm ngang */
+    flex-wrap: wrap; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1; 
+    min-width: 250px; 
+    margin-bottom: 20px;
+    padding-right: 20px;
+}
+
+.footer-section h3 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+}
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-color: #ff3333;
+    height: 2px;
+    width: 50px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.footer-section a:hover {
+    color: #ff3333; 
+    padding-left: 5px; 
+}
+
+/* Icon liên hệ */
+.contact i {
+    margin-right: 10px;
+    color: #ff3333;
+}
+
+/* Mạng xã hội */
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #ff3333;
+    transform: translateY(-3px); 
+}
+
+/* Dòng bản quyền cuối cùng */
+.footer-bottom {
+    background-color: #111;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 13px;
+    margin-top: 20px;
+    color: #777;
+}
