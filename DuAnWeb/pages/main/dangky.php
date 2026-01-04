@@ -1,54 +1,53 @@
 <?php
-if (isset($_POST['dangky'])) {
-    $tenkhachhang = trim($_POST['tenkhachhang']);
-    $email        = trim($_POST['email']);
-    $password     = trim($_POST['matkhau']);
-    $dienthoai    = trim($_POST['dienthoai']);
-    if ($tenkhachhang === "" || $email === "" || $password === "" || $dienthoai === "") {
-        echo '<script>alert("Vui lòng nhập đầy đủ thông tin trước khi đăng ký!");</script>';
-    } else {
-        $matkhau = md5($password);
-        $check_email = mysqli_query($mysqli, "SELECT * FROM tbl_dangky WHERE email='$email' LIMIT 1");
-        if (mysqli_num_rows($check_email) > 0) {
-            echo '<script>alert("Email này đã được sử dụng, vui lòng nhập email khác!");</script>';
+    if (isset($_POST['dangky'])) {
+        $tenkhachhang = trim($_POST['tenkhachhang']);
+        $email        = trim($_POST['email']);
+        $password     = trim($_POST['matkhau']);
+        $dienthoai    = trim($_POST['dienthoai']);
+        
+        if ($tenkhachhang === "" || $email === "" || $password === "" || $dienthoai === "") {
+            echo '<script>alert("Vui lòng nhập đầy đủ thông tin!");</script>';
         } else {
-            $sql_dangky = mysqli_query(
-                $mysqli,
-                "INSERT INTO tbl_dangky(tenkhachhang,email,matkhau,sodienthoai) 
-                 VALUES('$tenkhachhang','$email','$matkhau','$dienthoai')"
-            );
-            if ($sql_dangky) {
-                header("Location: index.php?quanly=dangnhap");
-                exit;
+            $matkhau = md5($password);
+            $check_email = mysqli_query($mysqli, "SELECT * FROM tbl_dangky WHERE email='$email' LIMIT 1");
+            if (mysqli_num_rows($check_email) > 0) {
+                echo '<script>alert("Email này đã được sử dụng!");</script>';
             } else {
-                echo '<script>alert("Có lỗi xảy ra, vui lòng thử lại sau!");</script>';
+                $sql_dangky = mysqli_query($mysqli, "INSERT INTO tbl_dangky(tenkhachhang,email,matkhau,sodienthoai) VALUES('$tenkhachhang','$email','$matkhau','$dienthoai')");
+                if ($sql_dangky) {
+                    echo '<script>alert("Đăng ký thành công!"); window.location.href="index.php?quanly=dangnhap";</script>';
+                }
             }
         }
     }
-}
 ?>
-<h2 style="text-align:center">ĐĂNG KÝ TÀI KHOẢN</h2>
-<form action="" method="post">
-<table width="95%" style="border-spacing: 10px; background-color: #d9d9d9; padding: 20px; border-radius: 10px;">
-    <tr>
-        <td style="width: 20%; font-size: 20px;">Tên khách hàng</td>
-        <td><input style="width: 70%;" type="text" name="tenkhachhang"></td>
-    </tr>
-    <tr>
-        <td style="width: 20%; font-size: 20px;">Email</td>
-        <td><input style="width: 69%; padding: 10px;" type="email" name="email"></td>
-    </tr>
-    <tr>
-        <td style="width: 20%; font-size: 20px;">Mật khẩu</td>
-        <td><input style="width: 69%; padding: 10px;" type="password" name="matkhau"></td>
-    </tr>
-    <tr>
-        <td style="width: 20%; font-size: 20px;">Số điện thoại</td>
-        <td><input style="width: 70%;" type="text" name="dienthoai" pattern="[0-9]*"></td>
-    </tr>
-    <tr>
-        <td colspan="2"><input style="width: 10%; padding: 10px; font-size: 16px; background-color: #8080ff; color: white; border: none; border-radius: 5px;" type="submit" name="dangky" value="Đăng ký">
-        <a style="text-decoration: none; margin-left: 10px; padding: 11px; font-size: 16px; background-color: #8080ff; color: white; border: none; border-radius: 5px;" href="index.php?quanly=dangnhap">Đăng nhập</a></td>
-    </tr>
-</table>
-</form>
+
+<div class="auth-container">
+    <div class="auth-box">
+        <h3 class="auth-title">ĐĂNG KÝ TÀI KHOẢN</h3>
+        <form action="" method="post" autocomplete="off">
+            <div class="form-group">
+                <label>Họ và tên</label>
+                <input type="text" name="tenkhachhang" placeholder="Nhập họ tên của bạn..." required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Nhập địa chỉ email..." required>
+            </div>
+            <div class="form-group">
+                <label>Số điện thoại</label>
+                <input type="text" name="dienthoai" placeholder="Nhập số điện thoại..." required>
+            </div>
+            <div class="form-group">
+                <label>Mật khẩu</label>
+                <input type="password" name="matkhau" placeholder="Nhập mật khẩu..." required>
+            </div>
+            
+            <button type="submit" name="dangky" class="btn-auth">ĐĂNG KÝ NGAY</button>
+            
+            <div class="auth-link">
+                <p>Bạn đã có tài khoản? <a href="index.php?quanly=dangnhap">Đăng nhập tại đây</a></p>
+            </div>
+        </form>
+    </div>
+</div>

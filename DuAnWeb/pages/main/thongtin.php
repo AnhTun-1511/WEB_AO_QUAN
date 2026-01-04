@@ -1,17 +1,34 @@
-<h1 style="width: 90%; text-align:center;">W/n Shop</h1>
-<p style="font-size: 1.3rem;">W/n shop mang đến cho giới trẻ Việt Nam những sản phẩm thời trang hiện đại, năng động và phù hợp xu hướng quốc tế.</p>
-<p style="font-size: 1.3rem;">Không chỉ bán quần áo, chúng tôi còn truyền cảm hứng để mỗi khách hàng tự tin thể hiện phong cách riêng.</p>
-<p style="font-size: 1.3rem;">Trở thành một trong những thương hiệu thời trang nội địa uy tín hàng đầu, góp phần định hình phong cách sống trẻ trung, sáng tạo và bền vững.</p><br>
-<h2 style="width: 90%; text-align:center;">Phong cách đa dạng</h2>
-<p style="font-size: 1.3rem; width: 90%; text-align:center;">Từ streetwear cá tính, công sở thanh lịch đến những outfit dạo phố năng động.</p>
-<h2 style="width: 90%; text-align:center;">Chất liệu an toàn, thân thiện</h2>
-<p style="font-size: 1.3rem; width: 90%; text-align:center;">Vải cotton, linen, jean chất lượng cao, thoáng mát, bền màu.</p>
-<h2 style="width: 90%; text-align:center;">Dịch vụ tận tâm</h2>
-<p style="font-size: 1.3rem; width: 90%; text-align:center;">Tư vấn mix đồ miễn phí, giao hàng nhanh, đổi trả dễ dàng trong vòng 7 ngày.</p>
-<h2 style="width: 90%; text-align:center;">Luôn đổi mới</h2>
-<p style="font-size: 1.3rem; width: 90%; text-align:center;">Cập nhật mẫu mã mới theo mùa, theo trend để khách hàng luôn bắt kịp xu hướng.</p>
-<h2 style="width: 90%; text-align:center;">Chính sách bảo hành</h2>
-<p style="font-size: 1.3rem; width: 90%; text-align:center;">Sửa chữa miễn phí hoặc đổi sang sản phẩm mới tương đương.</p>
-<h2 style="width: 90%; text-align:center;">Chính sách bảo mật thông tin khách hàng</h2>
-<p style="font-size: 1.3rem; width: 90%; text-align:center;">Cam kết không chia sẻ thông tin cá nhân (tên, số điện thoại, địa chỉ, email) cho bên thứ ba trừ khi có yêu cầu pháp luật.</p>
-<p style="font-size: 1.3rem; width: 90%; text-align:center;">Bảo mật dữ liệu bằng hệ thống lưu trữ an toàn, mã hóa giao dịch thanh toán.</p>
+<div class="page-content">
+    <h3 class="heading-product">VỀ W/N SHOP</h3>
+    
+    <div class="about-us-wrapper">
+        <div class="about-text">
+            <p class="intro">Chào mừng bạn đến với <b>W/n Shop</b> - Điểm đến thời trang hàng đầu dành cho giới trẻ!</p>
+            
+            <p>W/n Shop không chỉ đơn thuần là một cửa hàng quần áo, chúng tôi mang đến một phong cách sống hiện đại, năng động và đầy cá tính. Với mong muốn giúp các bạn trẻ tự tin thể hiện bản sắc riêng, các sản phẩm của W/n Shop luôn được cập nhật theo những xu hướng mới nhất của thời trang quốc tế.</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fa fa-tshirt"></i>
+                    <h4>Phong cách đa dạng</h4>
+                    <p>Từ Streetwear cá tính đến những bộ cánh công sở thanh lịch.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa fa-medal"></i>
+                    <h4>Chất lượng cao</h4>
+                    <p>Vải Cotton, Linen, Jean cao cấp, bền màu và thoáng mát.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa fa-shipping-fast"></i>
+                    <h4>Giao hàng nhanh</h4>
+                    <p>Vận chuyển toàn quốc, nhận hàng kiểm tra rồi mới thanh toán.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa fa-headset"></i>
+                    <h4>Hỗ trợ 24/7</h4>
+                    <p>Đội ngũ tư vấn viên nhiệt tình, sẵn sàng giải đáp mọi thắc mắc.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

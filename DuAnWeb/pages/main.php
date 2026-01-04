@@ -30,7 +30,10 @@
                         include("pages/main/sanpham.php");
                     } elseif($tam == 'timkiem') {
                         include("pages/main/timkiem.php");
+                    }elseif($tam == 'chinhsach') {
+                        include("pages/main/chinhsach.php");
                     }
+
                     else {
                         include("pages/main/index.php");
                     }
