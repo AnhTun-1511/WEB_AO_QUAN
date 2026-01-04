@@ -18,7 +18,7 @@
         <div class="footer-section contact">
             <h3>THÔNG TIN LIÊN HỆ</h3>
             <ul>
-                <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận 1, TP.HCM</li>
+                <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận Thuận Hoá, Tp Huế</li>
                 <li><i class="fas fa-phone"></i> 0123.456.789</li>
                 <li><i class="fas fa-envelope"></i> wnshop@gmail.com</li>
             </ul>
@@ -36,6 +36,6 @@
     </div>
     
     <div class="footer-bottom">
-        &copy; 2026 W/n Shop - All rights reserved | Designed by Nhom 1
+        &copy; 2026 W/n Shop - All rights reserved | Designed by Nhom 14
     </div>
 </div>
